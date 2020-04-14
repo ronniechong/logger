@@ -1,11 +1,11 @@
 {
   "name": "@digitalronin/logger",
-  "version": "0.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "Console logger for node and browser environment",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ronniechong/logger.git"
+    "url": "https://github.com/ronniechong/logger.git"
   },
   "author": "Ronnie Chong <ronnie@otakuness.com>",
   "license": "MIT",
@@ -29,15 +29,19 @@
     "chalk": "^4.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "commitizen": "^4.0.4",
     "cz-conventional-changelog": "3.1.0",
     "husky": "^4.2.5",
-    "jest": "^25.3.0"
+    "jest": "^25.3.0",
+    "semantic-release": "^17.0.4"
   },
   "scripts": {
     "commit": "git-cz",
-    "cm": "git-cz",
-    "test": "jest"
+    "test": "jest",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "config": {
     "commitizen": {
@@ -46,7 +50,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run cm"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }

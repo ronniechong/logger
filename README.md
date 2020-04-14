@@ -1,4 +1,4 @@
-# @digtalronin/logger
+# @digitalronin/logger
 
 A simple wrapper for `console.log` for Node or browser. The former supports colors, using `chalk` [Link](https://github.com/chalk/chalk)
 
