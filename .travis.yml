@@ -6,10 +6,11 @@ notifications:
   email: false
 node_js:
   - '13'
-script:
-  - npm run test
-after_success:
-  - npm run travis-deploy-once "npm run semantic-release"
-branches:
-  except:
-    - /^v\d+\.\d+\.\d+$/
+jobs:
+  include:
+    - stage: test
+      script:
+        - npm run test
+    - stage: deploy
+      if: branch = master
+      script: npm run travis-deploy-once "npm run semantic-release"
