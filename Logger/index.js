@@ -19,7 +19,7 @@ class Logger {
     const keys = Object.keys(this.default);
     this.params = keys.reduce(function(acc, i) {
       if (params[i]) {
-        const param = chalk[params[i]]
+        const param = chalk[params[i]];
         acc[i] = param ? param : chalk.white;
         return acc;
       }
