@@ -1,11 +1,11 @@
 const chalk = require('chalk');
 const { isNode } = require('@digitalronin/browser-or-node');
 const {
-  NODE,
   BROWSER,
-  LOG,
+  ERROR,
   INFO,
-  ERROR
+  LOG,
+  NODE,
 } = require('./constants');
 
 class Logger {
