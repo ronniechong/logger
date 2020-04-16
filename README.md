@@ -1,8 +1,8 @@
 # @digitalronin/logger
 
 ![NPM](https://img.shields.io/npm/l/@digitalronin/logger)
-[![npm version](http://img.shields.io/npm/v/REPO.svg?style=flat)](https://npmjs.org/package/@digitalronin/logger "View this project on npm")
-[![Build Status](https://travis-ci.com/ronniechong/logger.svg?branch=master)](https://travis-ci.com/ronniechong/logger)
+[![npm (scoped)](https://img.shields.io/npm/v/@digitalronin/logger)](https://npmjs.org/package/@digitalronin/logger "View this project on npm")
+[![Build Status](https://travis-ci.org/ronniechong/logger.svg?branch=master)](https://travis-ci.com/ronniechong/logger)
 
 A simple wrapper for `console.log` for Node or browser. The former supports colors, using `chalk` [Link](https://github.com/chalk/chalk)
 
